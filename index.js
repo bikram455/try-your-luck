@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       name: 'React',
-      value: 'X'
+      value: 'X',
+      disable: true
     };
   }
 
@@ -30,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="board-wrapper">
-        <Board value = {this.state.value} stopDice = {this.stopDice} rollDice = {this.rollDice} />
+        <Board value = {this.state.value} stopDice = {this.stopDice} rollDice = {this.rollDice} disabled={this.state.disable} />
       </div>
     );
   }

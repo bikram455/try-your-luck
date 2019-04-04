@@ -20,3 +20,10 @@ h1, p {
 .board-bottom {
   height: 100px
 }
+.bet-box { 
+  height: 30px; 
+  width: 30px;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold
+}
