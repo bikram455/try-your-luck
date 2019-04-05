@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Board = (props) => {console.log(props)
+const Board = (props) => {
   this.placeBet = (e) => {
-
+    var value = e.target.value;
+    if(value >= 1 && value <= 6) props.enableRoll(false);
+    else props.enableRoll(true);
   }
 
   return(

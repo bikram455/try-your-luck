@@ -28,10 +28,14 @@ class App extends Component {
     this.interval = setInterval(() => this.setState({ value: this.getRandomValue() }), 200 );
   }
 
+  enableRoll = (value) => {
+    this.setState({disable: value})
+  }
+
   render() {
     return (
       <div className="board-wrapper">
-        <Board value = {this.state.value} stopDice = {this.stopDice} rollDice = {this.rollDice} disabled={this.state.disable} />
+        <Board value = {this.state.value} stopDice = {this.stopDice} rollDice = {this.rollDice} disabled={this.state.disable} enableRoll={this.enableRoll} />
       </div>
     );
   }
